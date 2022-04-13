@@ -1,0 +1,6 @@
+<form>
+    <input type="text" name="name" [(ngModel)]="author.name" placeholder="name">
+    <input type="text" name="biography" [(ngModel)]="author.biography" placeholder="biography">
+    <button type="button" (click)="upsert()">submit</button>
+    <button type="reset">reset</button>
+</form>
