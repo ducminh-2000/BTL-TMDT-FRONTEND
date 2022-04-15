@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let item of cartItems; let i = index">
+        <p>name: {{item.name}}</p>
+        <p>price: {{item.price}}</p>
+        <p>quantity: {{item.quantity}}</p>
+        <p><button (click)="remove(i)">remove</button></p>
+    </li>
+</ul>
+<p>totalPrice: {{totalPrice}}</p>
+<button (click)="checkout()">checkout</button>

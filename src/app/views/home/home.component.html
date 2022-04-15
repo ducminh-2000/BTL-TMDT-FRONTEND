@@ -1,0 +1,34 @@
+<div>
+    <app-cart></app-cart>
+</div>
+<div>
+    <!-- <form> -->
+        <input type="text" [(ngModel)]="filter" name="filter" id="filter"/>
+        <button (click)="getBookItem()">search</button>
+        <!-- <button (click)="showAddItemModal()">create</button> -->
+
+    <!-- </form> -->
+   
+    <table>
+        <thead>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>images</th>
+            <th>discount</th>
+            <th></th>
+        </thead>
+        <tbody *ngFor="let bookItem of bookItems">
+            <td>{{bookItem.id}}</td>
+            <td>{{bookItem.name}}</td>
+            <td>{{bookItem.price}}</td>
+            <td><img src="{{bookItem.images}}"/></td>
+            <td>{{bookItem.discount}}%</td>
+
+            <td><button (click)="addToCart(bookItem)">Add to cart</button></td>
+
+            <!-- <td><button (click)="showEditItemModal(bookItem)">Update</button></td>
+            <td><button (click)="delete(bookItem)">Delete</button></td> -->
+        </tbody>
+    </table>
+</div>

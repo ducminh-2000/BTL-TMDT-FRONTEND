@@ -1,0 +1,26 @@
+<div class=" main row" style="overflow: unset;">
+    <!-- left -->
+    <div id="left" class="col-md-6">
+      <img id="logo" height="490" src="..\asset\images\logo.png">
+    </div>
+    <!-- right -->
+    <div class="col-md-6 right">
+      <div class="wrap-form">
+        <div id="form-text" class="">
+          <p id="description">login</p>
+          <form>
+            <div class="form-group">
+              <input #username class="form-control " id="email" type="text" aria-describedby="emailHelp" >
+            </div>
+            <div class="form-group">
+              <input #password class="form-control" id="password" type="password" >
+            </div>
+            <div class="form-group text-center">
+              <button (click)="login(username.value, password.value)" id="btn-login" type="button" class="btn">login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
